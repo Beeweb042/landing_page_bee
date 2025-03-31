@@ -2,10 +2,35 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Ma Landing Page</title>
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <title>Bee Web - Développeuse et Rédactrice Web</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <h1>Hello World !</h1>
+
+  <header class="header">
+    <!-- Logo cliquable -->
+    <a href="index.html" class="logo" aria-label="Retour à l'accueil">BeeWeb</a>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <ul class="nav__list">
+            <!-- Renvoyer à des ancres de la même page -->
+            <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+            <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+
+        <!-- Bouton mobile (caché par défaut) -->
+        <button class="nav__toggle" aria-expanded="false" aria-label="Menu">
+          <span class="hamburger"></span>
+        </button>
+    </nav>
+  </header>
+
+
+
 </body>
+
 </html>

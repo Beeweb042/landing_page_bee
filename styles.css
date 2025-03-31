@@ -1,0 +1,70 @@
+/**** RESET ****/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/**** VARIABLES COULEURS ****/
+
+:root {
+    --primary: #9154b6;
+    --secondary: #ffd600;
+    --text: #414042;
+}
+
+
+/**** BODY ****/
+
+body {
+    font-family: 'Overpass', sans-serif;
+    color: var(--text);
+}
+
+
+/**** HEADER ****/
+
+.header {
+    background: var(--primary);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--secondary);
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo:hover{
+    color:white;
+}
+
+/* Navigation Desktop */
+.nav__list {
+    display: flex;
+    gap: 3rem; /* espacement entre les liens du menu */
+    list-style: none; /* retire les puces et ornements de texte */
+}
+
+.nav__link {
+    color: white; /* couleur de base des liens du menu */
+    text-decoration: none;
+    transition: color 0.3s; 
+}
+
+.nav__link:hover {
+    color: var(--secondary); /* changement de couleur au hover des liens */
+}
+
+
+/**** BOUTON ***/
+/* caché en mode desktop */
+.nav__toggle {
+    display: none;
+}
