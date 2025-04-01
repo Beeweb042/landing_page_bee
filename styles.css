@@ -40,8 +40,8 @@ body {
     font-weight: bold;
 }
 
-.logo:hover{
-    color:white;
+.logo:hover {
+    color: white;
 }
 
 /* Navigation Desktop */
@@ -54,7 +54,7 @@ body {
 .nav__link {
     color: white;
     text-decoration: none;
-    transition: color 0.3s; 
+    transition: color 0.3s;
 }
 
 .nav__link:hover {
@@ -71,7 +71,7 @@ body {
 /******************** HERO ********************/
 
 .hero {
-    background-color: var(--bglight );
+    background-color: var(--bglight);
     padding: 4rem 2rem;
 }
 
@@ -137,43 +137,177 @@ body {
     background: white;
     border-radius: 8px;
     padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .service-card__title {
     color: var(--primary);
     margin-bottom: 1rem;
     position: relative;
-    display:inline-block;
+    display: inline-block;
 }
 
 .service-card__title::after {
-    content: '';                 /* Crée un élément vide */
-    position: absolute;          /* Se positionne par rapport au titre */
-    bottom: -5px;                /* 5px sous le texte */
-    left: 0;                     /* Commence à gauche */
-    width: 0;                    /* Invisible au départ */
-    height: 2px;                 /* Épaisseur du trait */
-    background: var(--secondary); /* Couleur jaune */
-    transition: width 0.3s;      /* Animation de 0.3s */
-  }
+    content: '';
+    /* Crée un élément vide */
+    position: absolute;
+    /* Se positionne par rapport au titre */
+    bottom: -5px;
+    /* 5px sous le texte */
+    left: 0;
+    /* Commence à gauche */
+    width: 0;
+    /* Invisible au départ */
+    height: 2px;
+    /* Épaisseur du trait */
+    background: var(--secondary);
+    /* Couleur jaune */
+    transition: width 0.3s;
+    /* Animation de 0.3s */
+}
 
-  /* draws a line under the title of the hovered card */
-  .service-card:hover
-  .service-card__title::after {
+/* draws a line under the title of the hovered card */
+.service-card:hover .service-card__title::after {
     width: 100%;
-  }
+}
 
-  .service-card__detail {
+.service-card__detail {
     color: var(--text);
     line-height: 1.5;
-  }
+}
+
+/******************** PORTFOLIO ********************/
+
+.portfolio {
+    background-color: var(--bglight);
+    padding: 4rem 2rem;
+}
+
+.portfolio__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio__title {
+    color: var(--text);
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.portfolio-item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 21rem;
+    background: var(--bglight);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(145, 84, 182, 0.3); /* Couleur --secondary en RGB (à ajuster selon votre valeur exacte) */
+    outline: 2px solid rgba(145, 84, 182, 0.2);}
+
+.item__placeholder {
+    text-align: center;
+    padding: 1rem;
+}
+
+.placeholder__icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.portfolio-item h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-item p {
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.portfolio__cta {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 0.8rem 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.portfolio__cta:hover {
+    transform: translateY(3px);
+    background-color: var(--secondary);
+    color:var(--text);
+}
+
+
+
+/* INFINITE SCROLL CAROUSEL */
+
+.scroller-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem;
+    position: relative;
+}
+
+.scroller {
+    max-width: 100%;
+    margin: 2rem 0;
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,
+            transparent,
+            white 20%,
+            white 80%,
+            transparent);
+    mask: linear-gradient(90deg,
+            transparent,
+            white 20%,
+            white 80%,
+            transparent);
+}
+
+.scroller__inner {
+    width: max-content;
+    display: flex;
+    gap: 2rem;
+    padding-block: 1rem;
+    animation: scroll 20s linear infinite;
+}
+
+.scroller[data-direction="right"] .scroller__inner {
+    animation-direction: reverse;
+}
+
+.scroller[data-speed="slow"] .scroller__inner {
+    animation-duration: 30s;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-50% - 1rem));
+    }
+}
+
+
 
 /******************** CONTACT ********************/
 .contact {
@@ -236,15 +370,30 @@ body {
     .hero {
         padding: 3rem 1rem;
     }
+
     .hero__title {
         font-size: 2rem;
     }
+
     .services {
         padding: 3rem 1rem;
     }
+
     .services__grid {
         grid-template-columns: 1fr;
     }
+
+    .scroller__inner {
+        gap: 1rem;
+        animation-duration: 15s;
+    }
+
+    .portfolio-item {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 17rem;
+    }
+
     .contact__submit {
         width: 100%;
     }
