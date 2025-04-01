@@ -181,13 +181,10 @@ body {
     .hero__title {
         font-size: 2rem;
     }
-<<<<<<< HEAD
     .services {
         padding: 3rem 1rem;
     }
     .services__grid {
         grid-template-columns: 1fr;
     }
-=======
->>>>>>> hero-section
 }
