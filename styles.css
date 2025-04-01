@@ -47,18 +47,18 @@ body {
 /* Navigation Desktop */
 .nav__list {
     display: flex;
-    gap: 3rem; /* espacement entre les liens du menu */
-    list-style: none; /* retire les puces et ornements de texte */
+    gap: 3rem;
+    list-style: none;
 }
 
 .nav__link {
-    color: white; /* couleur de base des liens du menu */
+    color: white;
     text-decoration: none;
     transition: color 0.3s; 
 }
 
 .nav__link:hover {
-    color: var(--secondary); /* changement de couleur au hover des liens */
+    color: var(--secondary);
 }
 
 
@@ -70,34 +70,34 @@ body {
 
 /******************** HERO ********************/
 
-/* Hero container */
 .hero {
     background-color: var(--bglight );
     padding: 4rem 2rem;
 }
 
-/* Hero title */
+.hero__container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
 .hero__title {
     color: var(--text);
-    font-size: clamp(2rem, 5vw, 3rem); /* responsive */
-    margin-left: 2rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 1rem;
 }
 
-/* Hero intro */
 .hero__intro {
     color: var(--primary);
     max-width: 800px;
-    margin: 0 2rem;
+    /* margin: 0 2rem; */
 }
 
-/* Hero CTA */
 .hero__cta {
     display: inline-block;
     background-color: var(--primary);
     color: white;
     padding: 0.8rem 2rem;
-    margin-left: 2rem;
     margin-top: 2rem;
     border-radius: 8px;
     text-decoration: none;
@@ -123,7 +123,7 @@ body {
 
 .services__title {
     color: var(--primary);
-    font-size: clamp(2rem, 5vw, 3rem); /* responsive */
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 1rem;
 }
 
@@ -164,13 +164,15 @@ body {
     transition: width 0.3s;      /* Animation de 0.3s */
   }
 
-  .service-card:hover .service-card__title::after {
-    width: 100%;  /* Le trait s'étend sur toute la largeur */
+  /* draws a line under the title of the hovered card */
+  .service-card:hover
+  .service-card__title::after {
+    width: 100%;
   }
 
   .service-card__detail {
-    color: var(--text);      /* Gris foncé */
-    line-height: 1.5;        /* Espacement entre les lignes */
+    color: var(--text);
+    line-height: 1.5;
   }
 
 /******************** CONTACT ********************/
@@ -180,13 +182,13 @@ body {
 }
 
 .contact__container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .contact__title {
     color: var(--text);
-    font-size: clamp(2rem, 5vw, 3rem); /* responsive */
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 1rem;
 }
 
