@@ -11,6 +11,9 @@
     --primary: #9154b6;
     --secondary: #ffd600;
     --text: #414042;
+    --bglight: #f8fafc;
+    --bgmedium: #a7b2bf;
+    --bgdark: #020618;
 }
 
 
@@ -23,7 +26,7 @@ body {
 
 /******************** HEADER ********************/
 .header {
-    background: var(--primary);
+    background: var(--bgdark);
     padding: 2rem;
     display: flex;
     justify-content: space-between;
@@ -69,7 +72,7 @@ body {
 
 /* Hero container */
 .hero {
-    background-color: lightgrey;
+    background-color: var(--bglight );
     padding: 4rem 2rem;
 }
 
