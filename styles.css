@@ -173,7 +173,60 @@ body {
     line-height: 1.5;        /* Espacement entre les lignes */
   }
 
+/******************** CONTACT ********************/
+.contact {
+    padding: 4rem 2rem;
+    background: var(--bglight);
+}
 
+.contact__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact__title {
+    color: var(--text);
+    font-size: clamp(2rem, 5vw, 3rem); /* responsive */
+    margin-bottom: 1rem;
+}
+
+.contact__form {
+    display: grid;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.contact__submit {
+    width: 200px;
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.contact__submit:hover {
+    background: var(--secondary);
+    color: var(--text);
+}
 
 /******************** RESPONSIVE ********************/
 
@@ -189,5 +242,8 @@ body {
     }
     .services__grid {
         grid-template-columns: 1fr;
+    }
+    .contact__submit {
+        width: 100%;
     }
 }
