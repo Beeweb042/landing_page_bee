@@ -1,99 +1,224 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width", initial-scale="1.0">
-  <title>Bee Web - Développeuse et Rédactrice Web</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <title>Bee Web - Développeuse et Rédactrice Web</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
+    <header class="header">
+      <!-- Logo cliquable -->
+      <a href="index.html" class="logo" aria-label="Retour à l'accueil"
+        >BeeWeb</a
+      >
 
-  <header class="header">
-    <!-- Logo cliquable -->
-    <a href="index.html" class="logo" aria-label="Retour à l'accueil">BeeWeb</a>
-
-    <!-- Navigation -->
-    <nav class="nav">
+      <!-- Navigation -->
+      <nav class="nav">
         <ul class="nav__list">
-            <!-- Renvoyer à des ancres de la même page -->
-            <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-            <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          <!-- Renvoyer à des ancres de la même page -->
+          <li class="nav__item">
+            <a href="#services" class="nav__link">Services</a>
+          </li>
+          <li class="nav__item">
+            <a href="#portfolio" class="nav__link">Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
         </ul>
 
         <!-- Bouton mobile (caché par défaut) -->
         <button class="nav__toggle" aria-expanded="false" aria-label="Menu">
           <span class="hamburger"></span>
         </button>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <section class="hero">
-    <div class="hero__container">
+    <section class="hero">
+      <div class="hero__container">
         <!-- TITRE DU HERO -->
         <h1 class="hero__title">Développeuse Web et Web Mobile</h1>
 
         <!-- PHRASE D'ACCROCHE -->
-        <p class="hero__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem perspiciatis nostrum, porro officiis dicta mollitia quae est consectetur praesentium laborum tempore accusantium voluptates quia iusto perferendis eius sunt corporis eveniet.</p>
+        <p class="hero__intro">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+          perspiciatis nostrum, porro officiis dicta mollitia quae est
+          consectetur praesentium laborum tempore accusantium voluptates quia
+          iusto perferendis eius sunt corporis eveniet.
+        </p>
 
         <!-- CTA -->
         <a href="#contact" class="hero__cta">Parlons de votre projet !</a>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <section id="services" class="services">
-    <div class="services__container">
-      <h2 class="services__title">Mes domaines d'expertise</h2>
+    <section id="services" class="services">
+      <div class="services__container">
+        <h2 class="services__title">Mes domaines d'expertise</h2>
 
-      <div class="services__grid">
-        <!-- service 1 -->
-         <article class="service-card">
-          <h3 class="service-card__title">Intégration web</h3>
-          <p class="service-card__detail">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos corporis aliquid unde, molestias non placeat nostrum dolores odio ex reprehenderit itaque sunt saepe nisi, doloremque cupiditate? Aliquid praesentium minus similique? Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, nulla! Ab, impedit recusandae. Non amet consectetur sapiente molestias vitae, dolore neque ut natus rem vero et itaque reiciendis voluptas exercitationem.
-          </p>
-         </article>
-
-         <!-- service 2 -->
+        <div class="services__grid">
+          <!-- service 1 -->
           <article class="service-card">
-            <h3 class="service-card__title">Rédaction technique</h3>
+            <h3 class="service-card__title">Intégration web</h3>
             <p class="service-card__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illum laudantium veniam harum assumenda dolorum, quaerat asperiores cupiditate reiciendis eveniet. Tenetur, saepe sunt? Rem beatae sed, modi nesciunt similique quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. A cumque nulla quidem doloribus quo doloremque harum, beatae ipsum consequuntur sit magni aliquam distinctio et vel eum temporibus itaque. Itaque, magnam.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos
+              corporis aliquid unde, molestias non placeat nostrum dolores odio
+              ex reprehenderit itaque sunt saepe nisi, doloremque cupiditate?
+              Aliquid praesentium minus similique? Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Modi, nulla! Ab, impedit recusandae.
+              Non amet consectetur sapiente molestias vitae, dolore neque ut
+              natus rem vero et itaque reiciendis voluptas exercitationem.
             </p>
           </article>
 
+          <!-- service 2 -->
+          <article class="service-card">
+            <h3 class="service-card__title">Rédaction technique</h3>
+            <p class="service-card__detail">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto illum laudantium veniam harum assumenda dolorum,
+              quaerat asperiores cupiditate reiciendis eveniet. Tenetur, saepe
+              sunt? Rem beatae sed, modi nesciunt similique quibusdam. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. A cumque nulla
+              quidem doloribus quo doloremque harum, beatae ipsum consequuntur
+              sit magni aliquam distinctio et vel eum temporibus itaque. Itaque,
+              magnam.
+            </p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="contact">
-    <div class="contact__container">
-      <h2 class="contact__title">Contactez-moi</h2>
+    <section id="portfolio" class="portfolio">
+      <div class="portfolio__container">
+        <h2 class="portfolio__title">Mes Réalisations</h2>
 
-      <form class="contact__form">
-        <div class="form-group">
-          <label for="name">Nom</label>
-          <input type="text" name="name"  id="name" required>
+        <div class="scroller-wrapper">
+          <div class="scroller" data-direction="right" data-speed="slow">
+            <div class="scroller__inner">
+
+              <!-- Item 1 -->
+              <div class="portfolio-item">
+                <div class="item__placeholder">
+                  <svg class="placeholder__icon" viewBox="0 0 24 24">
+                    <path
+                      fill="var(--primary)"
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"
+                    />
+                  </svg>
+                  <h3>Site E-commerce</h3>
+                  <p>Projet à venir</p>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="portfolio-item">
+                <div class="item__placeholder">
+                  <svg class="placeholder__icon" viewBox="0 0 24 24">
+                    <path
+                      fill="var(--primary)"
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                    />
+                  </svg>
+                  <h3>Application Mobile</h3>
+                  <p>En développement</p>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="portfolio-item">
+                <div class="item__placeholder">
+                  <svg class="placeholder__icon" viewBox="0 0 24 24">
+                    <path
+                      fill="var(--primary)"
+                      d="M3 3v18h18V3H3zm16 16H5V5h14v14zM9 9h6v6H9z"
+                    />
+                  </svg>
+                  <h3>Portfolio Artistique</h3>
+                  <p>Bientôt disponible</p>
+                </div>
+              </div>
+
+              <!-- Dupliquez les items pour l'effet infini -->
+              <!-- Item 1 -->
+              <div class="portfolio-item">
+                <div class="item__placeholder">
+                  <svg class="placeholder__icon" viewBox="0 0 24 24">
+                    <path
+                      fill="var(--primary)"
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"
+                    />
+                  </svg>
+                  <h3>Site E-commerce</h3>
+                  <p>Projet à venir</p>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="portfolio-item">
+                <div class="item__placeholder">
+                  <svg class="placeholder__icon" viewBox="0 0 24 24">
+                    <path
+                      fill="var(--primary)"
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                    />
+                  </svg>
+                  <h3>Application Mobile</h3>
+                  <p>En développement</p>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="portfolio-item">
+                <div class="item__placeholder">
+                  <svg class="placeholder__icon" viewBox="0 0 24 24">
+                    <path
+                      fill="var(--primary)"
+                      d="M3 3v18h18V3H3zm16 16H5V5h14v14zM9 9h6v6H9z"
+                    />
+                  </svg>
+                  <h3>Portfolio Artistique</h3>
+                  <p>Bientôt disponible</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <div class="form-group">
-          <label for="email">Votre mail</label>
-          <input type="email" name="email" id="email" required>
-        </div>
+        <a href="#contact" class="portfolio__cta"
+        >Découvrez mes prochains projets</a
+      >
 
-        <div class="form-group">
-          <label for="message">Votre message</label>
-          <textarea name="message" id="message" rows="5" required></textarea>
-        </div>
-
-        <button type="submit" class="contact__submit">Envoyer</button>
-
-      </form>
-    </div>
-  </section>
+      </div>
+    </section>
 
 
-</body>
+    <section id="contact" class="contact">
+      <div class="contact__container">
+        <h2 class="contact__title">Contactez-moi</h2>
 
+        <form class="contact__form">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Votre mail</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="contact__submit">Envoyer</button>
+        </form>
+      </div>
+    </section>
+  </body>
 </html>
