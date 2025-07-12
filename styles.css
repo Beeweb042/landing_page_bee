@@ -8,7 +8,7 @@
 
 /******************** VARIABLES COULEURS ********************/
 :root {
-    --primary: #9154b6;
+    --primary: #ef3391;
     --secondary: #ffd600;
     --text: #414042;
     --bglight: #f8fafc;
@@ -42,11 +42,11 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-image: linear-gradient(45deg, rgba(191, 117, 135, 0.639) 0%, rgba(214, 255, 255, 0.631) 100%), url('img/hand_coding_bw.jpg');
-    background-position: 0% 0%, center bottom;
+    /* background-image: linear-gradient(45deg, rgba(191, 117, 135, 0.639) 0%, rgba(214, 255, 255, 0.631) 100%), url('img/hand_coding_bw.jpg'); */
+    /* background-position: 0% 0%, center bottom;
     background-repeat: repeat, no-repeat;
     background-attachment: fixed;
-    background-size: cover, cover;
+    background-size: cover, cover; */
     background-color: rgb(255, 255, 255);
 }
 
@@ -82,16 +82,16 @@ body {
 .contact__title  {
     color: var(--primary);
     font-size: clamp(1rem, 1.5rem, 2rem);
-    transition: font-size 0.2s ease-in-out;
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 
 
 /******************** PAGE WRAPPER ********************/
 .page-wrapper {
-    max-width: 60%;
+    max-width: 90%;
     margin: 3.5rem auto;
-    background-color:rgba(44, 42, 54, 0.85);
+    background-color:rgba(27, 26, 26, 0.94);
     box-shadow: 0rem 3rem 3.125rem 0 rgba(44,42,54,0.451);
     border-radius: 10px;
     position:relative;
@@ -102,9 +102,7 @@ body {
 
 /******************** HEADER ********************/
 .header {
-    background-color: transparent;
     padding: clamp(1.5rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem);
-    /*clamp(min,pref,max)*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,9 +120,9 @@ body {
 }
 
 .nav__list {
-    display: flex;
-    gap: clamp(1.5rem, 4vw, 3rem);
-    list-style: none;
+display: none;
+  flex-direction: column;
+  list-style: none;
 }
 
 .nav__link {
@@ -156,13 +154,12 @@ body {
 /******************** TOGGLE ********************/
 /* caché en mode desktop */
 .nav__toggle {
-    display: none;
+  display: block;
 }
 
 
 /******************** HERO ********************/
 .hero {
-    background-color: transparent;
     padding: clamp(1rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem);}
 
 .hero__container {
@@ -178,7 +175,6 @@ body {
 
 /******************** SERVICES ********************/
 .services {
-    background-color: transparent;
     padding: clamp(1rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem);
 }
 
@@ -191,7 +187,7 @@ body {
 
 .services__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
 }
 
@@ -241,7 +237,6 @@ body {
 /******************** PORTFOLIO ********************/
 
 .portfolio {
-    background-color: transparent;
     padding: clamp(1rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem);
 }
 
@@ -253,7 +248,7 @@ body {
 
 .portfolio-item {
     font-size: clamp(0.8rem, 2vw, 1.1rem);
-    flex-basis: 21rem;
+    flex-basis: 17rem;
     background: var(--bglight);
     border-radius: 12px;
     padding: 1.5rem;
@@ -265,7 +260,7 @@ body {
 
 .portfolio-item:hover {
     transform: translateY(-5px);
-    box-shadow: 6px 6px 12px rgba(255, 214, 0, 0.3);
+    box-shadow: 4px 4px 10px rgba(255, 0, 191, 0.656);
 }
 
 .portfolio-item h3 {
@@ -295,7 +290,6 @@ body {
 .scroller-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    /* padding: clamp(1rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem); */
     position: relative;
 }
 
@@ -317,8 +311,9 @@ body {
 .scroller__inner {
     width: max-content;
     display: flex;
-    gap: 2rem;
-    animation: scroll 0s linear infinite;
+    gap: 1rem;
+    animation: scroll 15s linear infinite;
+    will-change: transform;
 }
 
 .scroller[data-direction="right"] .scroller__inner {
@@ -333,14 +328,10 @@ body {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-50% - 1rem)); }
 }
-.scroller__inner {
-    will-change: transform;
-}
 
 
 /******************** CONTACT ********************/
 .contact {
-    background-color: transparent;
     padding: clamp(1rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem);
 }
 
@@ -364,7 +355,7 @@ body {
 .form-group textarea{
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid var(--primary);
+    border: none;
     border-radius: 8px;
     font-family: inherit;
     transition: border-color 0.3s;
@@ -374,11 +365,11 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--secondary);
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--secondary), transparent 0%);
+    box-shadow: 0 0 0 1px var(--secondary);
 }
 
 .contact__submit {
-    width: 200px;
+    width: 100%;
     margin: 0 auto;
     border: none;
 }
@@ -387,7 +378,6 @@ body {
 /******************** FOOTER ********************/
 
 .footer {
-    background-color: transparent;
     padding: clamp(1rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem);  
 }
 
@@ -395,12 +385,12 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
 }
 
 .footer__title {
-    color: var(--secondary);
+    color: var(--primary);
     font-size: clamp(0.5rem, 0.8rem, 1.2rem);
     margin-bottom: 1rem;
     position: relative;
@@ -430,7 +420,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0px;
+    width: 0;
     height: 2px;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
@@ -468,7 +458,7 @@ body {
     width: 100%;
     height: 1rem;
     padding: 0.8rem;
-    border: 1px solid var(--primary);
+    border: none;
     border-radius: 8px;
     font-family: inherit;
     transition: border-color 0.3s;
@@ -477,7 +467,7 @@ body {
 .footer__input:focus {
     outline: none;
     border-color: var(--secondary);
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--secondary), transparent 0%);
+    box-shadow: 0 0 0 1px var(--secondary);
 }
 
 .footer__submit {
@@ -504,16 +494,17 @@ body {
     color: var(--bglight);
     text-align: center;
     padding-top: 2rem;
-    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
 }
 
 .heart-icon {
     color: var(--bglight);
     display: inline-block;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin: 0 0.2rem;
     vertical-align: middle;
     transition: all 0.3s ease;
+    cursor: pointer;
   }
   
   .heart-icon:hover {
@@ -529,38 +520,47 @@ body {
   }
 
 .footer__highlight {
-    font-weight: 600;
+    font-weight: 500;
+    font-style: italic;
 }
 
 
 /******************** RESPONSIVE ********************/
 
-@media (max-width: 768px) {
-    .nav__list {
-        display: none;
-        flex-direction: column;
-    }
-    .nav__toggle {
-        display: block;
-    }
-    .page-wrapper {
-        max-width: 90%;
-    }
-    .services__grid {
-        grid-template-columns: 1fr;
-    }
-    .scroller__inner {
-        gap: 1rem;
-        animation-duration: 15s;
-    }
-    .portfolio-item {
-        flex-basis: 17rem;
-    }
-    .contact__submit {
-        width: 100%;
-    }
-    .footer__container {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
+@media (min-width: 768px) {
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .page-wrapper {
+    max-width: 80%;
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .scroller__inner {
+    gap: 2rem;
+    animation-duration: 30s;
+  }
+
+  .portfolio-item {
+    flex-basis: 21rem;
+  }
+
+  .contact__submit {
+    width: 200px;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
 }
